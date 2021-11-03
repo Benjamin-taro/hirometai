@@ -25,8 +25,8 @@ def job():
     time.sleep(1)
     element.click()
 
-    username = "hirometaiaiu@gmail.com"
-    Pass = "wakariyasui"
+    username = "*****@gmail.com"
+    Pass = "*****"
 
     element = browser.find_element_by_css_selector("#username_or_email")
     element.clear()
@@ -53,11 +53,11 @@ def job():
     #import sys, subprocess
     #subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'gspread','oauth2client'])
 
-    scope = ['https://spreadsheets.google.com/feeds',
-             'https://www.googleapis.com/auth/drive']
+    scope = ['*****',
+             '*****']
 
 
-    credentials = ServiceAccountCredentials.from_json_keyfile_name('./Downloads/shitsumonbako-80f8f6c9f0cd.json', scope)
+    credentials = ServiceAccountCredentials.from_json_keyfile_name('*****', scope)
     gc = gspread.authorize(credentials)
     workbook = gc.open('質問箱')
     wks = workbook.add_worksheet(title=str(datetime.datetime.now()), rows=100, cols=26)
